@@ -45,7 +45,8 @@ export default {
       {
         id: 10,
         title: 'Ant Design Title 10',
-      }, {
+      },
+      {
         id: 11,
         title: 'Ant Design Title 11',
       },
@@ -86,9 +87,7 @@ export default {
         title: 'Ant Design Title 20',
       },
     ];
-    const {
-      body,
-    } = req;
+    const { body } = req;
 
     const { pageSize, offset } = body;
     return res.json({

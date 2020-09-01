@@ -1,4 +1,4 @@
 export default {
   appType: 'h5',
-  mobileLayout: true
+  mobileLayout: true,
 };
