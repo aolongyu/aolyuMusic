@@ -1,5 +1,12 @@
 import { ResponseError, Context } from 'umi-request';
-import { NavBarProps, TitleListItem, NavBarListItem, TabBarProps, TabBarListItem } from 'alita';
+import {
+  NavBarProps,
+  TitleListItem,
+  NavBarListItem,
+  TabBarProps,
+  TabBarListItem,
+  history,
+} from 'alita';
 
 // 请求中间件 就是发起请求和响应之后需要统一操作数据就写这
 // https://github.com/umijs/umi-request#example-1
@@ -10,6 +17,8 @@ const middleware = async (ctx: Context, next: any) => {
     '<-------------------------------初始化请求------------------------------->',
   );
   await next();
+  // 加载home页
+  history.replace('/home');
   console.log(
     '%c%s',
     'color: white; background: green;',
